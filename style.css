@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var("open san");
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2eadf;
+    min-height: 100vh;
+    font-family: var("open san");
+}
+
+.div {
+    position: relative;
+    display: flex;
+    width: 340px;
+    height: 750px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 5px 5px 9px 9px #666;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.div2 {
+    border: 1px solid #01130f;
+    position: absolute;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    bottom: 0;
+    color: #555;
+    z-index: 1;
+    background-image: conic-gradient(from var(--border-angle), #213, #312 50%, #413),
+        conic-gradient(from var(--border-angle), transparent 20%, #255, #345);
+    background-size: calc(100% - (var(--border-size)*2)) calc(100%=(var(--border-size)*2), cover);
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-animation: bg-spin 3s linear infinite;
+    animation: bg-spin 3s linear infinite;
+    box-shadow: 3px 3px 10px 10px #666;
+}
+
+
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn
+    }
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+button {
+    background-color: #353535;
+    color: #555;
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    transition: all 2s linear;
+}
+
+button:hover {
+    background-color: #057a0b;
+    color: #09f728;
+}
+
+
+.bigger2:focus-within .container2 {
+    visibility: visible;
+}
+
+.bigger3:focus-within .container3 {
+    visibility: visible;
+}
+
+.container {
+    position: absolute;
+    width: 340px;
+    height: 700px;
+    background-color: #01130f;
+    color: #057a0b;
+    top: -700px;
+    left: -1px;
+}
+
+.container2 {
+    position: absolute;
+    width: 340px;
+    height: 700px;
+    background-color: #01130f;
+    color: #057a0b;
+    top: -700px;
+    left: -1px;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.container3 {
+    position: absolute;
+    width: 340px;
+    height: 700px;
+    background-color: #01130f;
+    color: #057a0b;
+    top: -700px;
+    left: -1px;
+    z-index: 2;
+    visibility: hidden;
+}
+
+header {
+    position: relative;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #666;
+    background-image: conic-gradient(from var(--border-angle), #213, #312 50%, #413),
+        conic-gradient(from var(--border-angle), transparent 20%, #255, #345);
+    background-size: calc(100% - (var(--border-size)*2)) calc(100%=(var(--border-size)*2), cover);
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-animation: bg-spin 3s linear infinite;
+    animation: bg-spin 3s linear infinite;
+    box-shadow: 3px 3px 10px 10px #666;
+}
+
+header .logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.action {
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    gap: 15px;
+}
+
+a {
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+section {
+    position: relative;
+    padding: 20px 10px;
+    background-image: conic-gradient(from var(--border-angle), rgb(147, 30, 173), rgb(196, 29, 112) 50%, rgb(110, 7, 38)),
+        conic-gradient(from var(--border-angle), transparent 20%, #255, #345);
+    background-size: calc(100% - (var(--border-size)*2)) calc(100%=(var(--border-size)*2), cover);
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-animation: bg-spin 3s linear infinite;
+    animation: bg-spin 3s linear infinite;
+    box-shadow: 3px 3px 10px 10px #666;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #252525;
+    background-color: #252525;
+    border-radius: 20px;
+}
+
+input {
+    width: 350px;
+    border: 0px;
+    background-color: #252525;
+    border-radius: 20px;
+}
+
+::placeholder {
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 20px;
+    color: #111111;
+}
+
+.yy {
+    border: 1px solid #969494;
+    border-radius: 5px;
+    background-color: #969494;
+}
+
+.yy:hover {
+    background-color: #09f728;
+    color: #057a0b;
+}
+
+.content {
+    margin-top: 10px;
+    background-color: #01130f;
+}
+
+.content .data {
+    position: relative;
+    width: 100%;
+    height: 510px;
+}
+
+.contact {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+    background-color: #01130f;
+    color: #3a3939;
+}
+
+.block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.block:hover {
+    background-color: #202020;
+    border-radius: 4px;
+}
+
+.img {
+    position: relative;
+    min-width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border: 1px solid #09f728;
+    border-radius: 50%;
+}
+
+img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details {
+    position: relative;
+    width: 100%;
+}
+
+.list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    overflow: hidden;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: 100%;
+    width: 100%;
+    color: #636262;
+}
+
+.time {
+    font-size: 0.75em;
+    color: #555;
+}
+
+.message {
+    position: relative;
+    margin-top: 50px;
+    margin-left: -250px;
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+}
+
+b {
+    background-color: #09f728;
+    border: 1px solid #09f728;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
